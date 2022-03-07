@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head" />
+    <meta charset="UTF-8">
+    <title>Result of Dice Roll</title>
+</head>
+<body>
+    <nav th:replace="partials :: navbar"></nav>
+    <h1>Results!!!</h1>
+        <h3>User Dice Roll: <span th:text="${n}"></span></h3>
+        <h3>Computer Dice Roll: <span th:text="${randomDiceRoll}"></span></h3>
+        <br>
+        <h3><span th:text="${result}"></span> </h3>
+
+    <footer th:replace="partials :: footer"></footer>
+</body>
+</html>

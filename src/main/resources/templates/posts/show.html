@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="partials :: head">
+    <meta charset="UTF-8">
+    <title>View Post</title>
+</head>
+<body>
+<nav th:replace="partials :: navbar"></nav>
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title" th:text="${individualPost.getTitle()}">Title</h3>
+            <p class="card-text" th:text="${individualPost.getBody()}">Description of post</p>
+        </div>
+        <h5>Submitted by: <span th:text="${individualPost.getUser().getEmail()}"></span></h5>
+    </div>
+
+    <footer th:replace="partials :: footer"></footer>
+</body>
+</html>

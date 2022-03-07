@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="partials :: head">
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<nav th:replace="partials :: navbar"></nav>
+    <div class="card-body" th:each="post : ${allPost}">
+        <h3 class="card-title" th:text="${post.getTitle()}">Title</h3>
+        <p class="card-text" th:text="${post.getBody()}">Description of post</p>
+    </div>
+
+    <footer th:replace="partials :: footer"></footer>
+</body>
+</html>
